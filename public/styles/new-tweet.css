@@ -1,0 +1,46 @@
+.new-tweet {
+
+  background-color: #eee;
+  border: 1px solid #c5bdbd;
+  border-radius: 8px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  display: none;
+}
+
+/*.hidden {
+
+  display: none;
+}*/
+
+.new-tweet h2 {
+
+  border-bottom: 1px solid black;
+
+}
+
+.new-tweet textarea {
+
+  width: 100%;
+  padding: 4px;
+
+}
+
+.new-tweet .counter {
+
+  float: right;
+  font-style: italic;
+
+}
+
+.new-tweet .negative {
+
+  float: right;
+  font-style: italic;
+  color: red;
+}
+
+
+
+

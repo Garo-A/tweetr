@@ -1,0 +1,87 @@
+#allTweets {
+
+  padding-top: 1em;
+}
+
+
+.tweets {
+
+  border: 1px solid #c5bdbd;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.tweets > header {
+
+  background-color: #eee;
+  border-radius: 8px 8px 0px 0px;
+  padding: 6px;
+  height: 60px;
+}
+
+.tweets > header > img {
+
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+}
+
+.tweets > header > .user {
+
+  float: left;
+  padding-left: 4px;
+  padding-top: 3px;
+}
+
+.tweets > header > .handle {
+
+  float: right;
+  padding-top: 3px;
+}
+
+.tweets > footer {
+
+  border-top: 1px solid #c5bdbd;
+  padding: 6px;
+}
+
+footer > img {
+
+  display: none;
+}
+
+.hovered {
+
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.hovered > header {
+
+  background-color: #eee;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.hovered > footer > img {
+
+  display: initial;
+  float: right;
+  width: 18px;
+  height: 18px;
+  padding-right: 1px;
+}
+
+#allTweets .content {
+
+  padding: 2em 2em;
+}
+
+
+
+
+
+
+
