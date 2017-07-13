@@ -1,3 +1,4 @@
+//Responsible for toggling compose button on top right corner, as well adding hovered class.
  $(document).ready(function(){
 
   $("#nav-bar").on("click", ".compose-btn", function(){

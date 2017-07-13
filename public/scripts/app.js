@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+// Creates HTML template for individual tweets and appends correct data to each.
   function createTweetElement(data) {
 
     let element = $('<article></article>').addClass("tweets"); //THIS IS WHATS GOING TO BE RETURNED
@@ -29,6 +30,7 @@ $(document).ready(function() {
     return element;
   }
 
+//Used to calcualte timestamp. Could not import "moment" so created my own function do to it.
   function time(msec) {
 
     let now = (new Date()).getTime();
@@ -69,6 +71,7 @@ $(document).ready(function() {
     }
   }
 
+//Sends AJAX requrest to load tweets.
   function loadTweets() {
     $.ajax({
       url:"/tweets",
@@ -82,6 +85,8 @@ $(document).ready(function() {
 
   loadTweets();
 
+
+// Responsible for submitting new tweet. Will also verify that input is not empty or too long.
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
 

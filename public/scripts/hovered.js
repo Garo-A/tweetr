@@ -1,3 +1,4 @@
+//Responsible for adding hovered class to element that is moused over.
 $(document).ready(function() {
 
   $("#allTweets").on("mouseenter", ".tweets", function() {
