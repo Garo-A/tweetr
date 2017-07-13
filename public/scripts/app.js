@@ -14,9 +14,9 @@ $(document).ready(function() {
 
     //Configuring Footer
     $(footer).text(time(data.created_at));
-    $("<img>").attr("src", "http://www.iconsdb.com/icons/preview/guacamole-green/flag-3-xxl.png").appendTo(footer);
-    $("<img>").attr("src", "http://www.freeiconspng.com/uploads/retweet-icon-1.png").appendTo(footer);
-    $("<img>").attr("src", "https://pbs.twimg.com/profile_images/2365327617/a24p3jrjacf6anumc4rl_400x400.png").appendTo(footer);
+    $("<i></i>").addClass("fa fa-heart").attr("aria-hidden", "true").appendTo(footer);
+    $("<i></i>").addClass("fa fa-retweet").attr("aria-hidden","true").appendTo(footer);
+    $("<i></i>").addClass("fa fa-flag").attr("aria-hidden", "true").appendTo(footer);
 
     //Configuring Tweet Content
     $(content.text(data.content.text));
