@@ -43,9 +43,7 @@ $(document).ready(function() {
         renderTweets(data);
       }
     })
-
   }
-
   loadTweets();
 
   $(".new-tweet form").on("submit", function(event) {
@@ -67,9 +65,9 @@ $(document).ready(function() {
       url:"/tweets",
       type: "POST",
       data: $(this).serialize(),
-      success: function(all) {
-        $("#allTweets").empty();
-        loadTweets()
+      success: function() {
+        location.reload(true);
+        console.log("Page has been reloaded")
       }
     })
 
