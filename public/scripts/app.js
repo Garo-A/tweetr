@@ -13,7 +13,7 @@ $(document).ready(function() {
     $("<span></span>").addClass("handle").text(data.user.handle).appendTo(header);
 
     //Configuring Footer
-    $(footer).text(data.created_at);
+    $(footer).text(time(data.created_at));
     $("<img>").attr("src", "http://www.iconsdb.com/icons/preview/guacamole-green/flag-3-xxl.png").appendTo(footer);
     $("<img>").attr("src", "http://www.freeiconspng.com/uploads/retweet-icon-1.png").appendTo(footer);
     $("<img>").attr("src", "https://pbs.twimg.com/profile_images/2365327617/a24p3jrjacf6anumc4rl_400x400.png").appendTo(footer);
@@ -27,6 +27,40 @@ $(document).ready(function() {
     $(footer).appendTo(element);
 
     return element;
+  }
+
+  function time(msec) {
+
+    let now = (new Date()).getTime();
+    let diff = now - msec;
+
+    let seconds = Math.floor(diff/1000);
+    if (seconds < 60){
+      return (`Posted ${seconds} seconds ago.`)
+    }
+
+    let minutes = Math.floor(seconds/60);
+    if (minutes < 60){
+      return (`Posted ${minutes} minutes ago.`)
+    }
+
+    let hours = Math.floor(minutes/60);
+    if (hours < 24) {
+      return (`Posted ${hours} hours ago.`)
+    }
+
+    let days = Math.floor(hours/24);
+    if (days < 365) {
+      return (`Poster ${days} days ago.`)
+    }
+
+    let months = Math.floor(days/30);
+    if (months < 12) {
+      return (`Posted ${months} months ago`)
+    }
+
+    let years = Math.floor(months/12);
+      return (`Posted ${years} years ago`)
   }
 
   function renderTweets(data) {
@@ -44,6 +78,8 @@ $(document).ready(function() {
       }
     })
   }
+
+
   loadTweets();
 
   $(".new-tweet form").on("submit", function(event) {
