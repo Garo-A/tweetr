@@ -1,5 +1,4 @@
-nav {
-
+nav nav {
   position: fixed;
   height: 80px;
   width: 100%;
@@ -8,41 +7,29 @@ nav {
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 4px;
-  z-index: 1;
-
-}
-
-#nav-bar .logo {
-
+  z-index: 1; }
+nav #nav-bar .logo {
   width: 80px;
   height: 80px;
   float: left;
   padding-right: 10px;
-
-}
-
-#nav-bar .header {
-
-font-size: 2em;
-float: left;
-line-height: 70px;
-}
-
-#nav-bar button {
-
+  colour: blue; }
+nav #nav-bar .header {
+  font-size: 2em;
+  float: left;
+  line-height: 70px; }
+nav #nav-bar button {
   float: right;
   margin-top: 1em;
   padding: 10px;
   border: 1px solid black;
-  border-radius: 8px;
-}
-
-.hoveredOn {
-
+  border-radius: 8px; }
+nav .hoveredOn {
   float: right;
   margin-top: 1em;
   padding: 10px;
   background-color: white;
   border: 1px solid black;
-  border-radius: 8px;
-}
+  border-radius: 8px; }
+
+/*# sourceMappingURL=nax.css.map */
