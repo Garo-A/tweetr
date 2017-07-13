@@ -16,6 +16,7 @@ MongoClient.connect(MONGODB_URI, function(err,  db){
 
   console.log(`Mongo Successfully connected to: ${MONGODB_URI}`)
 
+
   // The in-memory database of tweets. It's a basic object with an array in it.
   //NONE
 

@@ -20,5 +20,5 @@ This repository is the starter code for the project: Students will fork and clon
 - md5
 - mongodb
 - nodemon
-
+- sass (installed through Ruby: `gem install sass`)
 
