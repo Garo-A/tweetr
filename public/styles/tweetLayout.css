@@ -9,6 +9,7 @@
   border: 1px solid #c5bdbd;
   border-radius: 8px;
   margin-bottom: 1em;
+  opacity: 0.7;
 }
 
 .tweets > header {
@@ -32,6 +33,8 @@
   float: left;
   padding-left: 4px;
   padding-top: 3px;
+  font-weight: bold;
+  font-size: 1.5em
 }
 
 .tweets > header > .handle {
@@ -56,13 +59,13 @@ footer > img {
   border: 1px solid black;
   border-radius: 8px;
   margin-bottom: 1em;
+  opacity: 1;
 }
 
 .hovered > header {
 
   background-color: #eee;
   padding: 4px;
-  font-weight: bold;
 }
 
 .hovered > footer > img {
