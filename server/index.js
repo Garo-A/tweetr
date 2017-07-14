@@ -1,6 +1,7 @@
 "use strict";
 
 // Basic express setup:
+require('dotenv').config();
 
 const PORT          = 8080;
 const express       = require("express");
@@ -9,7 +10,6 @@ const app           = express();
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = process.env.MONGODB_URI;
 
-require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
