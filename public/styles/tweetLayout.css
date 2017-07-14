@@ -54,6 +54,13 @@ footer > i.fa {
   display: none;
 }
 
+footer > span.likes {
+
+  float: right;
+  color: red;
+  padding-right: 4px;
+}
+
 .hovered {
 
   border: 1px solid black;
