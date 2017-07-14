@@ -39,6 +39,6 @@ MongoClient.connect(MONGODB_URI, function(err,  db){
   app.use("/tweets", tweetsRoutes);
 })
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("Example app listening on port " + PORT);
 });
