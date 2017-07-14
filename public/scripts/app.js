@@ -3,10 +3,10 @@ $(document).ready(function() {
 // Creates HTML template for individual tweets and appends correct data to each.
   function createTweetElement(data) {
 
-    let element = $('<article></article>').addClass("tweets"); //THIS IS WHATS GOING TO BE RETURNED
+    let element = $('<article></article>').addClass("tweets").attr("data-id", data._id);
     let content = $('<div></div>').addClass("content");
     let header = $('<header></header>');
-    let footer = $('<footer></footer');
+    let footer = $('<footer></footer').attr("data-likes", data.likes);
 
     //Configuring Header
     $("<img>").attr("src", data.user.avatars.small).appendTo(header);
@@ -18,6 +18,7 @@ $(document).ready(function() {
     $("<i></i>").addClass("fa fa-heart").attr("aria-hidden", "true").appendTo(footer);
     $("<i></i>").addClass("fa fa-retweet").attr("aria-hidden","true").appendTo(footer);
     $("<i></i>").addClass("fa fa-flag").attr("aria-hidden", "true").appendTo(footer);
+    $("<span></span>").addClass("likes").text(`${data.likes} Likes`).appendTo(footer);
 
     //Configuring Tweet Content
     $(content.text(data.content.text));
@@ -26,6 +27,7 @@ $(document).ready(function() {
     $(header).appendTo(element);
     $(content).appendTo(element);
     $(footer).appendTo(element);
+
 
     return element;
   }
@@ -110,11 +112,25 @@ $(document).ready(function() {
         $("#allTweets").empty();
         $("textarea").val("");
         $(".counter").text("140");
+        $(".new-tweet").slideUp("fast");
         loadTweets();
       }
     })
 
   })
+
+  $("#allTweets").on('click', ".fa-heart", function(event) {
+
+    event.preventDefault()
+    let id = ($(this).closest(".tweets").data("id"));
+
+    $.ajax({
+      url:`/tweets/update/${id}`,
+      type: "POST",
+      success: location.reload(true)
+    });
+
+  });
 
 })
 
