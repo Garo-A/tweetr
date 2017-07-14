@@ -119,6 +119,7 @@ $(document).ready(function() {
 
   })
 
+  // When <3 is clicked, will send ajax post and up count. Success function not optimal will need to work on.
   $("#allTweets").on('click', ".fa-heart", function(event) {
 
     event.preventDefault()
