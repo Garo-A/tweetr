@@ -28,6 +28,16 @@ float: left;
 line-height: 70px;
 }
 
+#nav-bar > button.hoveredOn {
+
+  float: right;
+  margin-top: 1em;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  opacity: 1;
+}
+
 #nav-bar button {
 
   float: right;
@@ -35,14 +45,7 @@ line-height: 70px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 8px;
-}
-
-.hoveredOn {
-
-  float: right;
-  margin-top: 1em;
-  padding: 10px;
   background-color: white;
-  border: 1px solid black;
-  border-radius: 8px;
+  opacity: 0.7;
 }
+
