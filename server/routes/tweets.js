@@ -26,6 +26,7 @@ module.exports = function(DataHelpers) {
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
+      likes: 0,
       content: {
         text: req.body.text
       },
@@ -40,6 +41,21 @@ module.exports = function(DataHelpers) {
       }
     });
   });
+
+
+  tweetsRoutes.post("/update/:id", function (req, res) {
+
+    let id = req.params.id;
+
+    DataHelpers.addLike(id, function(err){
+      if (err) {
+        res.status(500).send();
+      } else {
+        res.status(201).send();
+      }
+    })
+
+  })
 
   return tweetsRoutes;
 
