@@ -107,8 +107,10 @@ $(document).ready(function() {
       type: "POST",
       data: $(this).serialize(),
       success: function() {
-        location.reload(true);
-        console.log("Page has been reloaded")
+        $("#allTweets").empty();
+        $("textarea").val("");
+        $(".counter").text("140");
+        loadTweets();
       }
     })
 
